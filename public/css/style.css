@@ -18,23 +18,24 @@
                         header img {
                             opacity: 0.3;
                             width: 100%;
-                            height: auto;
+                            height: 500px;
                         }
                         
                         header h1 {
                             position: absolute;
-                            padding: 190px
+                            padding: 500px;
+                            margin-top: -250px;
                         }
                         
                         .wrapper {
                             display: grid;
                             grid-gap: 20px;
-                            grid-template-columns: 400px 400px 400px;
+                            grid-template-columns: 500px 500px 500px;
                         }
                         
                         h1,
                         h2 {
-                            color: #d72ddd
+                            color: #0a0a0a
                         }
                         
                         a,
@@ -83,6 +84,7 @@
                             color: floralwhite;
                             margin: 0 auto;
                             border: 5px dashed white;
+                            padding: 10px;
                         }
                         
                         #customer_info {
@@ -96,4 +98,9 @@
                         button:hover {
                             background-color: #d72ddd;
                             cursor: pointer;
+                        }
+                        
+                        section {
+                            margin: 25px;
+                            padding: 15px;
                         }
