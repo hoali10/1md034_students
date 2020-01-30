@@ -1,10 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>DELI-VERY</title>
-    </head>
-    <body>
-        <h1>Hello World!!!</h1>
-        <a href="/map" target="_blank">Open map in new window</a>.
-    </body>
+
+
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Ordering burgers</title>
+    <meta charset="utf-8" />
+
+
+</head>
+
+<body>
+
+    <main>
+        <header id="header">
+            <h1>Welcome to BurgerOnline</h1>
+            <img src="https://u.tfstatic.com/restaurant_photos/131/361131/169/612/l-artisan-du-burger-st-germain-vue-de-la-salle-5db53.jpg" style="margin: auto;"></header>
+        </header>
+        <section id="burger_selection">
+            <h2>slecte burger</h2>
+            <p>This is where you execute the burger selection</p>
+
+            <div class="wrapper">
+                <div class="box a" </div>
+                    <h4>Fire Burger</h4>
+                    <img src="https://previews.123rf.com/images/kesu87/kesu871411/kesu87141100247/33457747-hamburger-d%C3%A9licieux-avec-des-flammes-de-feu.jpg" width="400">
+                    <ul>
+                        <li>1600 kCal</li>
+                        <li>
+                            <p>Contains <span id="lactos">lactos</span></p>
+                        </li>
+                        <li>
+                            <p>Contains <span id="gluten">gluten</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box b">
+                    <h4>Vegan</h4>
+                    <img src="https://joyfoodsunshine.com/wp-content/uploads/2017/04/Baked-Sweet-Potato-Black-Bean-Veggie-Burgers-gluten-free-4.jpg" width="300">
+                    <ul>
+                        <li>600 kCal</li>
+                        <li>
+                            <p><span id="lactosfree">Lactos free</span></p>
+                        </li>
+                        <li>
+                            <p><span id="glutenfree">Gluten free</span>
+                        </li>
+
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="box c">
+                    <h4>King size</h4>
+                    <img src="https://i.pinimg.com/600x315/be/2d/8c/be2d8c44cabf32bbbb90c5e541788e17.jpg" width="300">
+                    <ul>
+                        <li>3300 kCal</li>
+                        <li>
+                            <p>Contains <span id="lactos">lactos</span></p>
+                        </li>
+                        <li>
+                            <p>Contains <span id="gluten">gluten</span></p>
+                        </li>
+                    </ul>
+                </div>
+                </ul>
+
+
+        </section>
+        <section id="customer_info">
+            <h2>Customer information</h2>
+            <p>This is where you provides necessary information</p>
+            <form>
+                <p>
+                    <label for="fullname">Full name</label><br>
+                    <input type="text" id="First-and Last name" name="fn" required="required" placeholder="First-and Last name" />
+                </p>
+                <p>
+                    <label for="e-mail">E-mail</label><br>
+                    <input type="email" id="E-mmail" name="email" placeholder="E-mail address" />
+                </p>
+                <p>
+                    <label for="street">Street</label><br>
+                    <input type="text" id="Street" name="street" required="required" placeholder="Street name" />
+                </p>
+                <p>
+                    <label for="house">House</label><br>
+                    <input type="number" min="1" id="House" name="house" required="required" placeholder="House number" />
+                </p>
+                <p>
+                    <label for="payment">Payment option</label> <br />
+                    <select id="payment" name="po">
+                        <option value "Klarna" selected>Klarna</option>
+                        <option>Credit card</option>
+                        <option>Paypal</option>
+                        <option>EasyPay</option>
+                    </select>
+                </p>
+                </p>
+                <p>Gender</p>
+                <input type="radio" name="gender" value="male">Male<br>
+                <input type="radio" name="gender" value="female">Female<br>
+                <input type="radio" name="gender" value="non-binary">Non-binary<br>
+                <input type="radio" name="gender" value="undisclosed">Undisclosed<br>
+
+                <button type="submit" <><img
+                        src="https://cdnmedia.endeavorsuite.com/images/ThumbGenerator/Thumb.aspx?img=//cdnmedia.endeavorsuite.com/images/organizations/cb93a8f9-c2a1-49bd-8329-20bcb0399ddd/HELO/Click%20Here%20to%20Order%20Button.jpg&v=1493156846054&mw=400&mh=200&f=1?v=20190528112959"
+                        width="100" /></button>
+            </form>
+
+        </section>
+    </main>
+    <footer>@2020 Hypothetical Burger Inc</footer>
+</body>
+
 </html>

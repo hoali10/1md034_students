@@ -1,0 +1,99 @@
+                        @import url("reset.css");
+                        @import url("https://fonts.googleapis.com/css?family=Droid+Serif|Share+Tech+Mono");
+                        body {
+                            font-family: "Arial", sans-serif;
+                            font-size: 15pt;
+                            font-style: normal;
+                            font-weight: normal;
+                            color: #111111;
+                        }
+                        
+                        header {
+                            padding: 10px;
+                            margin-right: 25px;
+                            margin-left: 25px;
+                            overflow: hidden;
+                        }
+                        
+                        header img {
+                            opacity: 0.3;
+                            width: 100%;
+                            height: auto;
+                        }
+                        
+                        header h1 {
+                            position: absolute;
+                            padding: 190px
+                        }
+                        
+                        .wrapper {
+                            display: grid;
+                            grid-gap: 20px;
+                            grid-template-columns: 400px 400px 400px;
+                        }
+                        
+                        h1,
+                        h2 {
+                            color: #d72ddd
+                        }
+                        
+                        a,
+                        strong,
+                        em {
+                            color: #c9c630;
+                        }
+                        
+                        p.info,
+                        #login p {
+                            width: 80%;
+                            margin: 1vw auto;
+                        }
+                        
+                        table {
+                            width: 80%;
+                            margin: 0 auto;
+                        }
+                        
+                        button {
+                            margin: 25px;
+                        }
+                        
+                        #lactos {
+                            font-weight: bold;
+                            color: red;
+                        }
+                        
+                        #gluten {
+                            font-weight: bold;
+                            color: blue;
+                        }
+                        
+                        #lactosfree {
+                            font-weight: bold;
+                            color: green;
+                        }
+                        
+                        #glutenfree {
+                            font-weight: bold;
+                            color: yellow;
+                        }
+                        
+                        #burger_selection {
+                            background: black;
+                            color: floralwhite;
+                            margin: 0 auto;
+                            border: 5px dashed white;
+                        }
+                        
+                        #customer_info {
+                            background: wheat;
+                            color: #111111;
+                            margin: 0 auto;
+                            border: 5px dashed black;
+                            padding: 10px;
+                        }
+                        
+                        button:hover {
+                            background-color: #d72ddd;
+                            cursor: pointer;
+                        }
