@@ -1,6 +1,12 @@
 const vm = new Vue({
-    el: '#box a',
+    el: '#selection',
     data: {
-        arbitraryVariableName: 'Välj en burgare'
+        burgerSelection: 'Välj en burgare' + ' ' + new Date(),
+        fireBurger: fireBurger,
+        vegan: vegan,
+        kingSize: kingSize,
+        daily: daily,
+        texa: texa,
+
     }
 })

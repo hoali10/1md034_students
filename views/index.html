@@ -6,10 +6,8 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link>
-    <script src="js/js_script.js"></script>
-    <link>
-    <script src="js/js_script.js"></script>
+    <script src="js/js_script.js" defer></script>
+    <script src="js/vue_script.js" defer></script>
     <script src="https://vuejs.org/js/vue.js"></script>
     <title>Ordering burgers</title>
     <meta charset="utf-8" />
@@ -25,53 +23,87 @@
             <img src="https://u.tfstatic.com/restaurant_photos/131/361131/169/612/l-artisan-du-burger-st-germain-vue-de-la-salle-5db53.jpg" style="margin: auto;"></header>
         </header>
         <section id="burger_selection">
-            <h2>slecte burger</h2>
-            <p>This is where you execute the burger selection</p>
+            <div id="selection">
+                <h3>
+                    <p>{{burgerSelection}}</p>
+                </h3>
 
-            <div class="wrapper">
-                <div class="box a" </div>
-                    <h4>Fire Burger</h4>
-                    <img src="https://previews.123rf.com/images/kesu87/kesu871411/kesu87141100247/33457747-hamburger-d%C3%A9licieux-avec-des-flammes-de-feu.jpg" width="400">
-                    <ul>
-                        <li>1600 kCal</li>
-                        <li>
-                            <p>Contains <span id="lactos">lactos</span></p>
-                        </li>
-                        <li>
-                            <p>Contains <span id="gluten">gluten</span></p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="box b">
-                    <h4>Vegan</h4>
-                    <img src="https://joyfoodsunshine.com/wp-content/uploads/2017/04/Baked-Sweet-Potato-Black-Bean-Veggie-Burgers-gluten-free-4.jpg" width="300">
-                    <ul>
-                        <li>600 kCal</li>
-                        <li>
-                            <p><span id="lactosfree">Lactos free</span></p>
-                        </li>
-                        <li>
-                            <p><span id="glutenfree">Gluten free</span>
-                        </li>
+                <div class="wrapper">
+                    <div class="box a">
+                        <p id="fireBurger">{{fireBurger.name}}</p>
+                        <img src="https://previews.123rf.com/images/kesu87/kesu871411/kesu87141100247/33457747-hamburger-d%C3%A9licieux-avec-des-flammes-de-feu.jpg" width="400">
+                        <ul>
+                            <li>1600 kCal</li>
+                            <li>
+                                <p>Contains <span id="lactos">lactos</span></p>
+                            </li>
+                            <li>
+                                <p>Contains <span id="gluten">gluten</span></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box b">
+                        <p id="vegan">{{vegan.name}}</p>
+                        <img src="https://joyfoodsunshine.com/wp-content/uploads/2017/04/Baked-Sweet-Potato-Black-Bean-Veggie-Burgers-gluten-free-4.jpg" width="300">
+                        <ul>
+                            <li>600 kCal</li>
+                            <li>
+                                <p><span id="lactosfree">Lactos free</span></p>
+                            </li>
+                            <li>
+                                <p><span id="glutenfree">Gluten free</span>
+                            </li>
 
-                        </li>
+                            </li>
 
-                    </ul>
-                </div>
-                <div class="box c">
-                    <h4>King size</h4>
-                    <img src="https://i.pinimg.com/600x315/be/2d/8c/be2d8c44cabf32bbbb90c5e541788e17.jpg" width="300">
-                    <ul>
-                        <li>3300 kCal</li>
-                        <li>
-                            <p>Contains <span id="lactos">lactos</span></p>
-                        </li>
-                        <li>
-                            <p>Contains <span id="gluten">gluten</span></p>
-                        </li>
-                    </ul>
+                        </ul>
+                    </div>
+                    <div class="box c">
+                        <p id="kingSize">{{kingSize.name}}</p>
+                        <img src="https://i.pinimg.com/600x315/be/2d/8c/be2d8c44cabf32bbbb90c5e541788e17.jpg" width="300">
+                        <ul>
+                            <li>3300 kCal</li>
+                            <li>
+                                <p>Contains <span id="lactos">lactos</span></p>
+                            </li>
+                            <li>
+                                <p>Contains <span id="gluten">gluten</span></p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="box d">
+                        <p id="daily">{{daily.name}}</p>
+                        <img src="https://s3.us-east-2.amazonaws.com/ordersapp/business/5660348/items/hamberger.jpg" width="300">
+                        <ul>
+                            <li>1600 kCal</li>
+                            <li>
+                                <p><span id="lactosfree">Lactos free</span></p>
+                            </li>
+                            <li>
+                                <p>Contains <span id="gluten">gluten</span></p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="box e">
+                        <p id="texa">{{texa.name}}</p>
+                        <img src="https://lh3.googleusercontent.com/proxy/f9S0n_9zCVI3D6gQ4Oww8RkPg34Cwqb-pfNJZRQrN4L4oBDv_QXL7lFNvSbqKWl2rEtAeeWUxXFg3OKPk1eMzek8Bf-Gx0T2TjiNRH45BahQJDED4vHSsjyW5fIZPrLcvATxjS3BSEC3EdIwMTjIwYTgdd2_RQqFvBvBj4Fkl-u19jhT48TfgVuF-aaN7hclVmvSaCY"
+                            width="400">
+                        <ul>
+                            <li>3300 kCal</li>
+                            <li>
+                                <p>Contains <span id="lactos">lactos</span></p>
+                            </li>
+                            <li>
+                                <p>Contains <span id="gluten">gluten</span></p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <input v-model="selection">
+            <h1>{{selection}}</h1>
         </section>
         <section id="customer_info">
             <h2>Customer information</h2>

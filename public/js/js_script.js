@@ -23,8 +23,8 @@ let daily = new menuItem('Daily', '1600 kCal', 'Lactos free', 'Contains gluten')
 let texaImg = 'https://lh3.googleusercontent.com/proxy/f9S0n_9zCVI3D6gQ4Oww8RkPg34Cwqb-pfNJZRQrN4L4oBDv_QXL7lFNvSbqKWl2rEtAeeWUxXFg3OKPk1eMzek8Bf-Gx0T2TjiNRH45BahQJDED4vHSsjyW5fIZPrLcvATxjS3BSEC3EdIwMTjIwYTgdd2_RQqFvBvBj4Fkl-u19jhT48TfgVuF-aaN7hclVmvSaCY'
 let texa = new menuItem('Texa', '3600 kCal', 'Contains lactos', 'Contains gluten');
 
-console.log(fireBurger.nameAndkCal());
-console.log(vegan.nameAndkCal());
-console.log(kingSize.nameAndkCal());
-console.log(daily.nameAndkCal());
-console.log(texa.nameAndkCal());
+/*
+document.getElementById('fireBurger').innerHTML = "Fire Burger";
+document.getElementById('vegan').innerHTML = "Vegan";
+document.getElementById('kingSize').innerHTML = "King Size";
+*/
