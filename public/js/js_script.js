@@ -28,31 +28,27 @@ document.getElementById('kingSize').innerHTML = "King Size";
 document.getElementById('daily').innerHTML = "Daily";
 document.getElementById('texa').innerHTML = "Texa";
 */
-
 /*
 let listItem = document.getElementById("wrapper1");
 
 
-for (let i = 0; i < menu.length; i++) {
+for (burger of menu) {
 
     let burgerBox = document.createElement("div");
-    let listName = document.createTextNode(menu[i].name);
+    let allergies = '';
+
+    if (burger.lactos == "Contains lactos") {
+
+        allergies += "Contains lactos";
+
+    }
+    if (burger.gluten == "Contains gluten") {
+
+        allergies += "Contains gluten";
+
+    }
+    let listName = document.createTextNode(burger.name + allergies);
     burgerBox.appendChild(listName);
-
-
-    if (menu[i].lactos == "Contains lactos") {
-        let listLactos = document.createTextNode(menu[i].lactos);
-        burgerBox.appendChild(listLactos);
-
-    }
-    if (menu[i].gluten == "Contains gluten") {
-
-        let listGluten = document.createTextNode(menu[i].gluten);
-        burgerBox.appendChild(listGluten);
-
-
-    }
     listItem.appendChild(burgerBox);
 }
-
 */
