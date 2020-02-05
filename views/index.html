@@ -25,10 +25,10 @@
         <section id="burger_selection">
             <div id="selection">
                 <h3>
-                    <p>{{burgerSelection}}</p>
+                    <p>{{burgerselection}}</p>
                 </h3>
 
-                <div class="wrapper">
+                <div class="wrapper" id="wrapper1" v-for="burger in burgers">
                     <div class="box a">
                         <p id="fireBurger">{{fireBurger.name}}</p>
                         <img src="https://previews.123rf.com/images/kesu87/kesu871411/kesu87141100247/33457747-hamburger-d%C3%A9licieux-avec-des-flammes-de-feu.jpg" width="400">
@@ -43,7 +43,7 @@
                         </ul>
                     </div>
                     <div class="box b">
-                        <p id="vegan">{{vegan.name}}</p>
+                        <p id="vegan"> {{vegan.name}}</p>
                         <img src="https://joyfoodsunshine.com/wp-content/uploads/2017/04/Baked-Sweet-Potato-Black-Bean-Veggie-Burgers-gluten-free-4.jpg" width="300">
                         <ul>
                             <li>600 kCal</li>
@@ -88,8 +88,8 @@
 
                     <div class="box e">
                         <p id="texa">{{texa.name}}</p>
-                        <img src="https://lh3.googleusercontent.com/proxy/f9S0n_9zCVI3D6gQ4Oww8RkPg34Cwqb-pfNJZRQrN4L4oBDv_QXL7lFNvSbqKWl2rEtAeeWUxXFg3OKPk1eMzek8Bf-Gx0T2TjiNRH45BahQJDED4vHSsjyW5fIZPrLcvATxjS3BSEC3EdIwMTjIwYTgdd2_RQqFvBvBj4Fkl-u19jhT48TfgVuF-aaN7hclVmvSaCY"
-                            width="400">
+                        <img src="https://lh3.googleusercontent.com/proxy/Kh2-H3d7qVbx99WJu90Z3m6gzSoIJJjV4d1FJh8ui3_nZbDjS_BIdcmuiirPX1BHBUZJ28-x5sAUP4LweSbCMFNvIt-fF_ZLnvs44GzL1we4ePthc6mvL7a2MZj30B03pZgfG35Bk5Onf6WS10WuMDdjuhpdmDV7j_rDgx1HKqTldHwQ1sw9UrEwMgGyVlMr6qhw770"
+                            width="400" width="400">
                         <ul>
                             <li>3300 kCal</li>
                             <li>
@@ -103,7 +103,7 @@
                 </div>
             </div>
             <input v-model="selection">
-            <h1>{{selection}}</h1>
+            <h1></h1>
         </section>
         <section id="customer_info">
             <h2>Customer information</h2>
