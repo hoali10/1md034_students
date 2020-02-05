@@ -23,23 +23,18 @@
             <img src="https://u.tfstatic.com/restaurant_photos/131/361131/169/612/l-artisan-du-burger-st-germain-vue-de-la-salle-5db53.jpg" style="margin: auto;"></header>
         </header>
         <section id="burger_selection">
-            <div id="selection">
-                <h3>
-                    <p>Burger selection</p>
-                </h3>
-                <li v-for="burger in burgers">
-                    {{burger.name}}
-                    <p v-if="burger.lactos == 'Contains lactos'">Conains lactos
-                    </p>
-                    <p v-if="burger.gluten == 'Contains gluten'">
-                        Conains gluten</p>
-                </li>
-                <div class="wrapper" id="wrapper1" v-for="burger in burgers">
-                    <div id="fireBurger"></div>
-                    <div id="vegan"></div>
-                    <div id="kingSize"></div>
-                    <div id="daily"></div>
-                    <div id="texa"></div>
+            <div class="selection" id="selection">
+                <div class="wrapper" id="wrapper">
+                    <div v-for="burger in burgers">
+                        <h3>{{burger.name}}</h3>
+                        <img v-bind:src="burger.img" v-bind:width="burger.imgW">
+                        <ul>
+                            <li>{{burger.caloris}}</li>
+                            <li>{{burger.lactos}}</li>
+                            <li>{{burger.gluten}}</li>
+
+                        </ul>
+                    </div>
                 </div>
             </div>
             <input v-model="selection">
