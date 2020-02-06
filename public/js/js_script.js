@@ -1,3 +1,4 @@
+/*
 function menuItem(name, caloris, lactos, gluten, img, imgW) {
     this.name = name;
     this.caloris = caloris;
@@ -10,18 +11,19 @@ function menuItem(name, caloris, lactos, gluten, img, imgW) {
     };
 }
 
-let fireBurger = new menuItem('Fire Burger', '2700 kCal', 'Contains lactos', 'Contains gluten', 'https://previews.123rf.com/images/kesu87/kesu871411/kesu87141100247/33457747-hamburger-d%C3%A9licieux-avec-des-flammes-de-feu.jpg', 400);
+let fireBurger = new menuItem('Fire Burger', '2700 kCal', 'Contains lactos', 'Contains gluten', 'https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX4409427.jpg ', 400);
 
 let vegan = new menuItem('Vegan', '600 kCal', 'Lactos free', 'Gluten free', 'https://joyfoodsunshine.com/wp-content/uploads/2017/04/Baked-Sweet-Potato-Black-Bean-Veggie-Burgers-gluten-free-4.jpg', 400);
 
 let kingSize = new menuItem('King size', '3300 kCal', 'Contains lactos', 'Contains gluten', 'https://i.pinimg.com/600x315/be/2d/8c/be2d8c44cabf32bbbb90c5e541788e17.jpg', 400);
 
-let daily = new menuItem('Daily', '1600 kCal', 'Lactos free', 'Contains gluten', 'https://s3.us-east-2.amazonaws.com/ordersapp/business/5660348/items/hamberger.jpg', 400);
+let daily = new menuItem('Daily', '1600 kCal', 'Lactos free', 'Contains gluten', 'https://s3.us-east-2.amazonaws.com/ordersapp/business/5660348/items/hamberger.jpg', 390);
 
-let texa = new menuItem('Texa', '3600 kCal', 'Contains lactos', 'Gluten free', 'https://dimg04.c-ctrip.com/images/100p0k000000c496wD647_C_750_350.jpg?proc=source%2Ftrip', 400);
+let texa = new menuItem('Texa', '3600 kCal', 'Contains lactos', 'Gluten free', 'https://www.goodtaste.tv/wp-content/uploads/2017/07/texas_burger-copy-1.jpg', 400);
+
 
 let menu = [fireBurger, vegan, kingSize, daily, texa];
-
+*/
 /*
 document.getElementById('fireBurger').innerHTML = "Fire Burger";
 document.getElementById('vegan').innerHTML = "Vegan";
