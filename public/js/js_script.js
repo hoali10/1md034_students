@@ -32,7 +32,7 @@ document.getElementById('daily').innerHTML = "Daily";
 document.getElementById('texa').innerHTML = "Texa";
 */
 /*
-let listItem = document.getElementById("wrapper1");
+let listItem = document.getElementById("wrapper");
 for (burger of menu) {
 
     let burgerBox = document.createElement("div");
@@ -65,10 +65,36 @@ for (burger of menu) {
     burgerImg.src = burger.img;
     burgerImg.width = burger.imgW;
     burgerBox.appendChild(burgerImg);
-
-
     burgerBox.appendChild(columnItem);
     listItem.appendChild(burgerBox);
+}
+*/
+/*
 
+let myButton = document.getElementById("Btn");
+
+myButton.addEventListener("click", function() {
+    console.log('Button Clicked!');
+});
+
+myButton.onclick = function getDetails() {
+
+    let name = document.getElementById("Fullname").value;
+    let email = document.getElementById("Email").value;
+    let street = document.getElementById("Street").value;
+    let houseNr = document.getElementById("House").value;
+    let paymentOptions = document.getElementById("payment");
+    let payment = paymentOptions.options[paymentOptions.selectedIndex].text;
+
+    let genders = document.getElementsByName("gender");
+    let realGender;
+    for (var gender of genders) {
+        if (gender.checked) {
+            realGender = gender.value;
+            break;
+        }
+    }
+    let arr = [name, email, street, houseNr, payment, realGender];
+    console.log(arr);
 }
 */

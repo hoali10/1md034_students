@@ -23,6 +23,7 @@
                 <div class="wrapper" id="wrapper">
                     <div v-for="burger in burgers">
                         <h3>{{burger.name}}</h3>
+                        <input type="checkbox" :value="burger.name" :id="burger.name" v-model="checkBurg">
                         <img v-bind:src="burger.img" v-bind:width="burger.imgW">
                         <ul>
                             <li>{{burger.caloris}}</li>
@@ -33,8 +34,6 @@
                     </div>
                 </div>
             </div>
-            <input v-model="selection">
-            <h1></h1>
         </section>
         <section id="customer_info">
             <h2>Customer information</h2>
@@ -42,39 +41,40 @@
             <form>
                 <p>
                     <label for="fullname">Full name</label><br>
-                    <input type="text" id="First-and Last name" name="fn" required="required" placeholder="First-and Last name" />
+                    <input v-model="name" type="text" id="Fullname" name="fn" required="required" placeholder="First-and Last name" />
                 </p>
                 <p>
                     <label for="e-mail">E-mail</label><br>
-                    <input type="email" id="E-mmail" name="email" placeholder="E-mail address" />
+                    <input v-model="mail" type="email" id="Email" name="email" placeholder="E-mail address" />
                 </p>
                 <p>
                     <label for="street">Street</label><br>
-                    <input type="text" id="Street" name="street" required="required" placeholder="Street name" />
+                    <input v-model="street" type="text" id="Street" name="street" required="required" placeholder="Street name" />
                 </p>
                 <p>
                     <label for="house">House</label><br>
-                    <input type="number" min="1" id="House" name="house" required="required" placeholder="House number" />
+                    <input v-model="house" type="number" min="1" id="House" name="house" required="required" placeholder="House number" />
                 </p>
                 <p>
-                    <label for="payment">Payment option</label> <br />
-                    <select id="payment" name="po">
-                        <option value "Klarna" selected>Klarna</option>
-                        <option>Credit card</option>
-                        <option>Paypal</option>
-                        <option>EasyPay</option>
+                    <label for="payment">Payment options</label> <br />
+                    <select v-model="payment" id="payment" name="po">
+                        <option value="Klarna" id="klarna" selected>Klarna</option>
+                        <option value="CreditCard">Credit card</option>
+                        <option value="Paypal">Paypal</option>
+                        <option value="EasyPay">EasyPay</option>
                     </select>
                 </p>
                 </p>
-                <p>Gender</p>
-                <input type="radio" name="gender" value="male">Male<br>
-                <input type="radio" name="gender" value="female">Female<br>
-                <input type="radio" name="gender" value="non-binary">Non-binary<br>
-                <input type="radio" name="gender" value="undisclosed">Undisclosed<br>
+                <p id="gender">Gender</p>
+                <input v-model="gender" type="radio" name="gender" value="male" id="man">Male<br>
+                <input v-model="gender" type="radio" name="gender" value="female" id=" woman ">Female<br>
+                <input v-model="gender" type="radio" name="gender" value="non-binary" id="non-binary">Non-binary<br>
+                <input v-model="gender" type="radio" name="gender" value="other" id="other">Other<br>
 
-                <button type="submit" <><img
+                <button type="submit" v-on:click="markDone()" id="Btn"><img
                         src="https://cdnmedia.endeavorsuite.com/images/ThumbGenerator/Thumb.aspx?img=//cdnmedia.endeavorsuite.com/images/organizations/cb93a8f9-c2a1-49bd-8329-20bcb0399ddd/HELO/Click%20Here%20to%20Order%20Button.jpg&v=1493156846054&mw=400&mh=200&f=1?v=20190528112959"
                         width="100" /></button>
+                <p>{{output}}</p>
             </form>
 
         </section>
