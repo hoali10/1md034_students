@@ -2,8 +2,11 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
     <script type="text/javascript" src="js/menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/deli-very.css">
+    <script src="/socket.io/socket.io.js" defer></script>
     <script src="js/js_script.js" defer></script>
     <script src="js/vue_script.js" defer></script>
     <script src="https://vuejs.org/js/vue.js"></script>
@@ -38,40 +41,42 @@
         <section id="customer_info">
             <h2>Customer information</h2>
             <p>This is where you provides necessary information</p>
+            <h3> Delivery information: </h3>
             <form>
-                <p>
-                    <label for="fullname">Full name</label><br>
-                    <input v-model="name" type="text" id="Fullname" name="fn" required="required" placeholder="First-and Last name" />
-                </p>
-                <p>
-                    <label for="e-mail">E-mail</label><br>
-                    <input v-model="mail" type="email" id="Email" name="email" placeholder="E-mail address" />
-                </p>
-                <p>
-                    <label for="street">Street</label><br>
-                    <input v-model="street" type="text" id="Street" name="street" required="required" placeholder="Street name" />
-                </p>
-                <p>
-                    <label for="house">House</label><br>
-                    <input v-model="house" type="number" min="1" id="House" name="house" required="required" placeholder="House number" />
-                </p>
-                <p>
-                    <label for="payment">Payment options</label> <br />
-                    <select v-model="payment" id="payment" name="po">
+                <div id="submit">
+                    <p>
+                        <label for="fullname">Full name</label><br>
+                        <input v-model="name" type="text" id="Fullname" name="fn" required="required" placeholder="First-and Last name" />
+                    </p>
+                    <p>
+                        <label for="e-mail">E-mail</label><br>
+                        <input v-model="mail" type="email" id="Email" name="email" placeholder="E-mail address" />
+                    </p>
+                    <p>
+                        <label for="payment">Payment options</label> <br />
+                        <select v-model="payment" id="payment" name="po">
                         <option value="Klarna" id="klarna" selected>Klarna</option>
                         <option value="CreditCard">Credit card</option>
                         <option value="Paypal">Paypal</option>
                         <option value="EasyPay">EasyPay</option>
                     </select>
-                </p>
-                </p>
-                <p id="gender">Gender</p>
-                <input v-model="gender" type="radio" name="gender" value="male" id="man">Male<br>
-                <input v-model="gender" type="radio" name="gender" value="female" id=" woman ">Female<br>
-                <input v-model="gender" type="radio" name="gender" value="non-binary" id="non-binary">Non-binary<br>
-                <input v-model="gender" type="radio" name="gender" value="other" id="other">Other<br>
+                    </p>
+                    </p>
+                    <p id="gender">Gender</p>
+                    <input v-model="gender" type="radio" name="gender" value="male" id="man">Male<br>
+                    <input v-model="gender" type="radio" name="gender" value="female" id=" woman ">Female<br>
+                    <input v-model="gender" type="radio" name="gender" value="non-binary" id="non-binary">Non-binary<br>
+                    <input v-model="gender" type="radio" name="gender" value="other" id="other">Other<br>
+                    <div class="view-box">
+                        <div id="dots" v-on:click="addOrder">
+                            <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+                                {{key}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <button type="submit" v-on:click="markDone()" id="Btn"><img
+                <button v-on:click="markDone()" type="submit" id="Btn"><img
                         src="https://cdnmedia.endeavorsuite.com/images/ThumbGenerator/Thumb.aspx?img=//cdnmedia.endeavorsuite.com/images/organizations/cb93a8f9-c2a1-49bd-8329-20bcb0399ddd/HELO/Click%20Here%20to%20Order%20Button.jpg&v=1493156846054&mw=400&mh=200&f=1?v=20190528112959"
                         width="100" /></button>
                 <p>{{output}}</p>

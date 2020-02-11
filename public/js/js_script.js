@@ -81,8 +81,8 @@ myButton.onclick = function getDetails() {
 
     let name = document.getElementById("Fullname").value;
     let email = document.getElementById("Email").value;
-    let street = document.getElementById("Street").value;
-    let houseNr = document.getElementById("House").value;
+    // let street = document.getElementById("Street").value;
+    // let houseNr = document.getElementById("House").value;
     let paymentOptions = document.getElementById("payment");
     let payment = paymentOptions.options[paymentOptions.selectedIndex].text;
 
@@ -94,7 +94,7 @@ myButton.onclick = function getDetails() {
             break;
         }
     }
-    let arr = [name, email, street, houseNr, payment, realGender];
+    let arr = [name, email, payment, realGender];
     console.log(arr);
 }
 */
