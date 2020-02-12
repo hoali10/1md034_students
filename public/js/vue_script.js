@@ -1,22 +1,16 @@
     'use strict';
     const socket = io();
 
-    const box = new Vue({
-        el: '#burger_selection',
-        data: {
-            burgers: food,
-            checkBurg: []
-        },
-    });
 
     const vm = new Vue({
-        el: "#customer_info",
+        el: "#wrapper",
         data: {
+            burgers: food,
             name: "",
             mail: "",
             gender: "",
             payment: "",
-            output: "",
+            burgerz: [],
             orders: {},
             order: {
                 visible: false,
@@ -29,10 +23,6 @@
         },
 
         methods: {
-
-            markDone: function() {
-                this.output = this.name + ', ' + this.mail + ', ' + ', ' + ', ' + this.gender + ', ' + this.pay + ' Yor Order: ' + box.checkBurg
-            },
 
 
             getNext: function() {
@@ -57,7 +47,8 @@
                         x: this.order.details.x,
                         y: this.order.details.y,
                     },
-                    orderItems: box.checkBurg,
+                    orderItems: this.burgerz,
+                    orderInformation: [this.name, this.mail, this.gender, this.payment]
                 });
             },
 

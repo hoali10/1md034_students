@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <main>
+    <main id="wrapper">
         <header id="header">
             <h1>Welcome to BurgerOnline</h1>
             <img src="https://u.tfstatic.com/restaurant_photos/131/361131/169/612/l-artisan-du-burger-st-germain-vue-de-la-salle-5db53.jpg" style="margin: auto;"></header>
@@ -26,7 +26,7 @@
                 <div class="wrapper" id="wrapper">
                     <div v-for="burger in burgers">
                         <h3>{{burger.name}}</h3>
-                        <input type="checkbox" :value="burger.name" :id="burger.name" v-model="checkBurg">
+                        <input type="checkbox" :value="burger.name" :id="burger.name" v-model="burgerz">
                         <img v-bind:src="burger.img" v-bind:width="burger.imgW">
                         <ul>
                             <li>{{burger.caloris}}</li>
@@ -77,13 +77,20 @@
                     </div>
                 </div>
 
-                <button v-if=order.visible v-on:click="addOrder" type="submit" id="Btn"><img
-                        src="https://cdnmedia.endeavorsuite.com/images/ThumbGenerator/Thumb.aspx?img=//cdnmedia.endeavorsuite.com/images/organizations/cb93a8f9-c2a1-49bd-8329-20bcb0399ddd/HELO/Click%20Here%20to%20Order%20Button.jpg&v=1493156846054&mw=400&mh=200&f=1?v=20190528112959"
-                        width="100" /></button>
-                <p>{{output}}</p>
             </form>
 
         </section>
+
+        <button v-if=order.visible v-on:click="addOrder()" type="submit" id="Btn"><img
+            src="https://cdnmedia.endeavorsuite.com/images/ThumbGenerator/Thumb.aspx?img=//cdnmedia.endeavorsuite.com/images/organizations/cb93a8f9-c2a1-49bd-8329-20bcb0399ddd/HELO/Click%20Here%20to%20Order%20Button.jpg&v=1493156846054&mw=400&mh=200&f=1?v=20190528112959"
+            width="100" /></button>
+        <h3> Confirm your order </h3>
+        Name: {{ name }} <br /> Email: {{ mail }} <br /> Payment method: {{ payment }} <br /> Gender: {{ gender }} <br /> Deliver to: {{ order.details.x }} x / {{order.details.y }} y <br />
+        <h3> Order summary </h3>
+        Order: {{ burgerz.join(", ") }}<br />
+
+
+
     </main>
     <footer>@2020 Hypothetical Burger Inc</footer>
 </body>
